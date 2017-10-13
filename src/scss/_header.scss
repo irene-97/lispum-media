@@ -1,0 +1,105 @@
+.header {
+	.container {
+		&:first-child {
+			display: flex;
+			align-items: flex-end;
+			flex-direction: column;
+		}
+	}
+
+	&__subscribe {
+		margin-top: 1px;
+		width: 409px;
+		height: 28px;
+		background: $color-sun;
+
+		&__input {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 20px;
+			outline: none;
+			border: none;
+			padding: 3px 8px;
+			width: 224px;
+			height: 18px;
+		}
+
+		&__text {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 6px;
+			width: 85px;
+			font-family: $font-family-century-gothic;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: $color-black;
+		}
+
+		&__links {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 9px;
+		}
+
+		&__link {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			border-left: solid 1px $color-white;
+			width: 31px;
+			height: 28px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			&--facebook {
+				&::before {
+					@include sprite("facebook");
+				}
+			}
+
+			&--twitter {
+				&::before {
+					@include sprite("twitter");
+				}
+			}
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		margin-top: 12px;
+	}
+
+	&__menu {
+		margin-left: 155px;
+		padding-top: 32px;
+
+		&__item {
+			position: relative;
+			padding: 10px 16px;
+			font-size: 14px;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $color-black;
+
+			&::before {
+				@include sprite("arrow-menu");
+
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 14px;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
