@@ -1,0 +1,35 @@
+.clients {
+	.container {
+		padding: 0 55px;
+	}
+
+	&__title {
+		padding: 24px 0;
+		font-family: $font-family-bebas;
+		font-size: 20px;
+		line-height: 20px;
+		color: $color-sun;
+
+		span {
+			color: $color-black;
+		}
+	}
+
+	&__logos-clients {
+	}
+
+	&__logo {
+		display: inline-block;
+		vertical-align: middle;
+		padding-right: 65px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
